@@ -1,0 +1,23 @@
+* C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\half adder.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 15 11:06:42 2024
+
+
+
+** Analysis setup **
+.tran 0 2s 0 0.5s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "half adder.net"
+.INC "half adder.als"
+
+
+.probe
+
+
+.END

@@ -1,0 +1,24 @@
+* C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\3bit ripple counter.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Feb 19 10:33:47 2024
+
+
+
+** Analysis setup **
+.tran 0.5ms 16ms
+.OPTIONS DIGINITSTATE=0
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "3bit ripple counter.net"
+.INC "3bit ripple counter.als"
+
+
+.probe
+
+
+.END

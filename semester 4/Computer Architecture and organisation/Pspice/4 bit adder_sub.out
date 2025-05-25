@@ -1,0 +1,149 @@
+
+**** 04/28/24 18:26:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4 bit adder_sub.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 29 11:25:30 2024
+
+
+
+** Analysis setup **
+.tran 1s 10s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "4 bit adder_sub.net"
+
+**** INCLUDING "4 bit adder_sub.net" ****
+* Schematics Netlist *
+
+
+
+X_U1         $D_LO $N_0004 $N_0003 $N_0002 $N_0001 $N_0008 $N_0007 $N_0006
++  $N_0005 $N_0010 $N_0014 $N_0013 $N_0012 $N_0011 $G_DPWR $G_DGND 7483A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U4A         $N_0015 $N_0016 $N_0007 $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U5A         $N_0017 $N_0016 $N_0008 $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U3A         $N_0018 $N_0016 $N_0006 $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2A         $N_0019 $N_0016 $N_0005 $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_DSTM1         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0001 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+U_DSTM2         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0002 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_DSTM3         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0003 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+U_DSTM4         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0004 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1s 1 
++ 0s 0  
+--$
+ERROR -- Invalid value
+--------$
+ERROR -- Bad state value(s)
+U_DSTM5         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0019 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+U_DSTM6         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0018 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_DSTM7         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0015 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_DSTM8         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0017 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_DSTM9         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0016 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+
+**** RESUMING "4 bit adder_sub.cir" ****
+.INC "4 bit adder_sub.als"
+
+
+
+**** INCLUDING "4 bit adder_sub.als" ****
+* Schematics Aliases *
+
+.ALIASES
+X_U1            U1(C0=$D_LO A1=$N_0004 A2=$N_0003 A3=$N_0002 A4=$N_0001
++  B1=$N_0008 B2=$N_0007 B3=$N_0006 B4=$N_0005 C4=$N_0010 SUM1=$N_0014
++  SUM2=$N_0013 SUM3=$N_0012 SUM4=$N_0011 PWR=$G_DPWR GND=$G_DGND )
+X_U4A           U4A(A=$N_0015 B=$N_0016 Y=$N_0007 PWR=$G_DPWR GND=$G_DGND )
+X_U5A           U5A(A=$N_0017 B=$N_0016 Y=$N_0008 PWR=$G_DPWR GND=$G_DGND )
+X_U3A           U3A(A=$N_0018 B=$N_0016 Y=$N_0006 PWR=$G_DPWR GND=$G_DGND )
+X_U2A           U2A(A=$N_0019 B=$N_0016 Y=$N_0005 PWR=$G_DPWR GND=$G_DGND )
+U_DSTM1          DSTM1(PIN1=$N_0001 )
+U_DSTM2          DSTM2(PIN1=$N_0002 )
+U_DSTM3          DSTM3(PIN1=$N_0003 )
+U_DSTM4          DSTM4(PIN1=$N_0004 )
+U_DSTM5          DSTM5(PIN1=$N_0019 )
+U_DSTM6          DSTM6(PIN1=$N_0018 )
+U_DSTM7          DSTM7(PIN1=$N_0015 )
+U_DSTM8          DSTM8(PIN1=$N_0017 )
+U_DSTM9          DSTM9(PIN1=$N_0016 )
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+.ENDALIASES
+
+
+**** RESUMING "4 bit adder_sub.cir" ****
+.probe
+
+
+.END
+

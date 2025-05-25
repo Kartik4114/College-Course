@@ -1,0 +1,47 @@
+users.project(name, age, city)
+users.map((age * 2) + 5)
+users.filter(age >= 18 && city == "Delhi")
+users.group(age, aggs, type, sets)
+users.union(table1, table2)
+users.except(tableA, tableB)
+users.distinct()
+users.as(u)
+
+
+
+
+users.filter(age > 20).project(name, age).as(u)
+orders.join(u, users, user_id == id).distinct()
+data.map((income * 2) + 5).group(city, aggs, type, sets)
+dataset.union(users, admins)
+dataset.except(active, banned)
+let temp = dataset.filter(score >= 90).project(name)
+
+let result = users.join(inner, profiles, users.id == profiles.userId)
+                  .filter(age > 18)
+                  .map(age + 5)
+                  .project(users.name, profiles.bio)
+                  .distinct()
+
+
+
+// V
+let x = getUser()
+let x = getUser(age).map(user)
+users.map((age * 2) + 5)
+let x = getUser(getAge(age))
+users.filter(age > 18 and salary < 50000)
+users.join(inner, otherTable, user_id == order_user_id)
+DEFUN topScorers() -> result { students.filter(score > 95).project(name, score) }
+
+DEFUN getOrderDetails() -> result {
+    orders.join(inner, customers, orders.customerId == customers.id)
+          .project(customers.name, orders.total)
+}
+
+
+let finalResult = users.join(inner, orders, users.id == orders.userId)
+                       .filter((orders.total > 500 && orders.status == "delivered") || users.vip == "true")
+                       .map((orders.total * 1.15) + orders.tax)
+                       .project(users.name, orders.total, orders.tax)
+                       .distinct()

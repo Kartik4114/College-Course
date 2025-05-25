@@ -1,0 +1,265 @@
+
+**** 04/29/24 01:59:29 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4_bit arithmetic circuit.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Feb 12 10:03:22 2024
+
+
+
+** Analysis setup **
+.tran 0s 8s 0 1s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "4_bit arithmetic circuit.net"
+
+**** INCLUDING "4_bit arithmetic circuit.net" ****
+* Schematics Netlist *
+
+
+
+X_U7A         $N_0001 $N_0002 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U22A         $N_0003 $N_0004 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U23A         $N_0005 $N_0006 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U9A         $N_0007 $N_0008 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U8A         $N_0009 $N_0010 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U24         $N_0019 $N_0014 $N_0013 $N_0012 $N_0011 $N_0018 $N_0017 $N_0016
++  $N_0015 $N_0020 $N_0024 $N_0023 $N_0022 $N_0021 $G_DPWR $G_DGND 7483A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U21         $N_0027 $N_0027 $N_0025 $N_0026 $N_0003 $N_0004 $N_0028 $N_0029
++  $N_0005 $N_0006 $N_0009 $N_0010 $N_0017 $N_0018 $G_DPWR $G_DGND 74153 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U3         $N_0027 $N_0027 $N_0025 $N_0026 $N_0007 $N_0008 $N_0009 $N_0010
++  $N_0001 $N_0002 $N_0009 $N_0010 $N_0015 $N_0016 $G_DPWR $G_DGND 74153 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_DSTM26         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0019 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 0  
++ 1s 1  
++ 2s 0  
++ 3s 1 
++ 4s 0  
++ 5s 1  
++ 6s 0  
++ 7s 1  
+U_A4         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0011 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 1  
++ 8s 0  
+U_DSTM23         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0012 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 1  
++ 8s 0  
+U_DSTM24         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0013 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 1  
++ 8s 0  
+U_A1         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0014 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 1  
++ 8s 0  
+U_ENABLE         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0027 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=16s 
++ 0s 1  
+U_S0         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0025 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 0  
++ 4s 1  
+U_S1         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0026 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 2s 1  
++ 4s 0  
++ 6s 1 
+U_I1         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0007 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 0  
++ 8s 1  
+U_I2         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0001 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 0  
++ 8s 1  
+U_I3         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0003 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8s 
++ 0s 0  
++ 8s 1  
+U_I4         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0005 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=8 
++ 0s 0  
++ 8s 1  
+
+**** RESUMING "4_bit arithmetic circuit.cir" ****
+.INC "4_bit arithmetic circuit.als"
+
+
+
+**** INCLUDING "4_bit arithmetic circuit.als" ****
+* Schematics Aliases *
+
+.ALIASES
+X_U7A           U7A(A=$N_0001 Y=$N_0002 PWR=$G_DPWR GND=$G_DGND )
+X_U22A          U22A(A=$N_0003 Y=$N_0004 PWR=$G_DPWR GND=$G_DGND )
+X_U23A          U23A(A=$N_0005 Y=$N_0006 PWR=$G_DPWR GND=$G_DGND )
+X_U9A           U9A(A=$N_0007 Y=$N_0008 PWR=$G_DPWR GND=$G_DGND )
+X_U8A           U8A(A=$N_0009 Y=$N_0010 PWR=$G_DPWR GND=$G_DGND )
+X_U24           U24(C0=$N_0019 A1=$N_0014 A2=$N_0013 A3=$N_0012 A4=$N_0011
++  B1=$N_0018 B2=$N_0017 B3=$N_0016 B4=$N_0015 C4=$N_0020 SUM1=$N_0024
++  SUM2=$N_0023 SUM3=$N_0022 SUM4=$N_0021 PWR=$G_DPWR GND=$G_DGND )
+X_U21           U21(EAbar=$N_0027 EBbar=$N_0027 S0=$N_0025 S1=$N_0026
++  I0A=$N_0003 I1A=$N_0004 I2A=$N_0028 I3A=$N_0029 I0B=$N_0005 I1B=$N_0006
++  I2B=$N_0009 I3B=$N_0010 ZA=$N_0017 ZB=$N_0018 PWR=$G_DPWR GND=$G_DGND )
+X_U3            U3(EAbar=$N_0027 EBbar=$N_0027 S0=$N_0025 S1=$N_0026
++  I0A=$N_0007 I1A=$N_0008 I2A=$N_0009 I3A=$N_0010 I0B=$N_0001 I1B=$N_0002
++  I2B=$N_0009 I3B=$N_0010 ZA=$N_0015 ZB=$N_0016 PWR=$G_DPWR GND=$G_DGND )
+U_DSTM26          DSTM26(PIN1=$N_0019 )
+U_A4            A4(PIN1=$N_0011 )
+U_DSTM23          DSTM23(PIN1=$N_0012 )
+U_DSTM24          DSTM24(PIN1=$N_0013 )
+U_A1            A1(PIN1=$N_0014 )
+U_ENABLE          ENABLE(PIN1=$N_0027 )
+U_S0            S0(PIN1=$N_0025 )
+U_S1            S1(PIN1=$N_0026 )
+U_I1            I1(PIN1=$N_0007 )
+U_I2            I2(PIN1=$N_0001 )
+U_I3            I3(PIN1=$N_0003 )
+U_I4            I4(PIN1=$N_0005 )
+_    _($G_DGND=$G_DGND)
+_    _($G_DPWR=$G_DPWR)
+.ENDALIASES
+
+
+**** RESUMING "4_bit arithmetic circuit.cir" ****
+.probe
+
+
+.END
+
+**** 04/29/24 01:59:29 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4_bit arithmetic circuit.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_04            D0_GATE         
+      TPLHMN    4.800000E-09    0            
+      TPLHTY   12.000000E-09    0            
+      TPLHMX   22.000000E-09    0            
+      TPHLMN    3.200000E-09    0            
+      TPHLTY    8.000000E-09    0            
+      TPHLMX   15.000000E-09    0            
+
+
+**** 04/29/24 01:59:29 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4_bit arithmetic circuit.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+WARNING -- No analog devices -- Small-Signal analysis ignored
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .05
+

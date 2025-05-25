@@ -1,0 +1,74 @@
+* Schematics Netlist *
+
+
+
+X_U3A         $N_0001 $N_0002 $N_0003 $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U4A         $N_0001 $N_0004 $N_0005 $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U5A         $N_0006 $N_0003 $N_0005 $N_0007 $G_DPWR $G_DGND 7427 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1         $D_LO $N_0011 $N_0010 $N_0009 $N_0008 $N_0015 $N_0014 $N_0013
++  $N_0012 $N_0006 $N_0017 $N_0004 $N_0002 $N_0001 $G_DPWR $G_DGND 7483A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U6A         $N_0007 $N_0018 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2         $D_LO $N_0017 $N_0004 $N_0002 $N_0001 $D_LO $N_0018 $N_0018 $D_LO
++  $N_0020 $N_0024 $N_0023 $N_0022 $N_0021 $G_DPWR $G_DGND 7483A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_A2         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0009 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_A3         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0010 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_A4         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0011 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_B1         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0012 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+U_B3         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0014 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+U_B4         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0015 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_B2         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0013 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_A1         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0008 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  

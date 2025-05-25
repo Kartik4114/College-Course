@@ -1,0 +1,28 @@
+* Schematics Netlist *
+
+
+
+X_U2A         A B SUM $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1A         A B CARRY $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_DSTM3         STIM(1,1)
++ $G_DPWR $G_DGND
++ A 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=0.5s 
++ 1s 0  
++ 1.5s 1  
++ 2s 0  
+U_DSTM4         STIM(1,1)
++ $G_DPWR $G_DGND
++ B 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1s 
++ 0s 0  
++ 1s 1  
++ 1.5s 0  
++ 2s 1 
++ 2.5s 0  

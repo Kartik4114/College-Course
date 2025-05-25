@@ -1,0 +1,15 @@
+* Schematics Aliases *
+
+.ALIASES
+U_INPUT          INPUT(PWR=$G_DPWR GND=$G_DGND 1=$N_0001 )
+X_U4A           U4A(A=$N_0002 B=$N_0003 Y=$N_0004 PWR=$G_DPWR GND=$G_DGND )
+X_U3A           U3A(CLK=$N_0001 PREbar=$D_HI CLRbar=$D_HI J=$N_0004 K=$N_0004
++  Q=$N_0007 Qbar=$N_0008 PWR=$G_DPWR GND=$G_DGND )
+X_U2B           U2B(CLK=$N_0001 PREbar=$D_HI CLRbar=$D_HI J=$N_0002 K=$N_0002
++  Q=$N_0003 Qbar=$N_0009 PWR=$G_DPWR GND=$G_DGND )
+X_U1A           U1A(CLK=$N_0001 PREbar=$D_HI CLRbar=$D_HI J=$D_HI K=$D_HI
++  Q=$N_0002 Qbar=$N_0012 PWR=$G_DPWR GND=$G_DGND )
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+.ENDALIASES
+

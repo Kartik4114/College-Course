@@ -1,0 +1,159 @@
+
+**** 02/19/24 10:45:23 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\half adder.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 15 11:06:42 2024
+
+
+
+** Analysis setup **
+.tran 0 2s 0 0.5s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "half adder.net"
+
+**** INCLUDING "half adder.net" ****
+* Schematics Netlist *
+
+
+
+X_U2A         A B SUM $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1A         A B CARRY $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_DSTM3         STIM(1,1)
++ $G_DPWR $G_DGND
++ A 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=0.5s 
++ 1s 0  
++ 1.5s 1  
++ 2s 0  
+U_DSTM4         STIM(1,1)
++ $G_DPWR $G_DGND
++ B 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1s 
++ 0s 0  
++ 1s 1  
++ 1.5s 0  
++ 2s 1 
++ 2.5s 0  
+
+**** RESUMING "half adder.cir" ****
+.INC "half adder.als"
+
+
+
+**** INCLUDING "half adder.als" ****
+* Schematics Aliases *
+
+.ALIASES
+X_U2A           U2A(A=A B=B Y=SUM PWR=$G_DPWR GND=$G_DGND )
+X_U1A           U1A(A=A B=B Y=CARRY PWR=$G_DPWR GND=$G_DGND )
+U_DSTM3          DSTM3(PIN1=A )
+U_DSTM4          DSTM4(PIN1=B )
+_    _(A=A)
+_    _(B=B)
+_    _(SUM=SUM)
+_    _(CARRY=CARRY)
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+.ENDALIASES
+
+
+**** RESUMING "half adder.cir" ****
+.probe
+
+
+.END
+
+**** 02/19/24 10:45:23 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\half adder.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D0_GATE         D_86_1          D_86_2          D_86_3          
+      TPLHMN    0               3.600000E-09    4.800000E-09    2.400000E-09 
+      TPLHTY    0               9.000000E-09   12.000000E-09    6.000000E-09 
+      TPLHMX    0              17.000000E-09   24.000000E-09    6.000000E-09 
+      TPHLMN    0               2.000000E-09    2.800000E-09    2.400000E-09 
+      TPHLTY    0               5.000000E-09    7.000000E-09    6.000000E-09 
+      TPHLMX    0              11.000000E-09   16.000000E-09    6.000000E-09 
+
+
+               D_08            
+      TPLHMN    7.000000E-09 
+      TPLHTY   17.500000E-09 
+      TPLHMX   27.000000E-09 
+      TPHLMN    4.800000E-09 
+      TPHLTY   12.000000E-09 
+      TPHLMX   19.000000E-09 
+
+
+**** 02/19/24 10:45:23 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\half adder.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+WARNING -- No analog devices -- Small-Signal analysis ignored
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

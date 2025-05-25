@@ -1,0 +1,12 @@
+
+MVI C,00
+LDA 1
+MOV B,A
+LDA 2
+ADD B
+JNC skip
+INR C
+skip: STA 3
+MOV A,C
+STA 4
+hlt

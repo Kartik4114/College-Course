@@ -1,0 +1,23 @@
+* C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4 bit binary adder2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 29 10:29:24 2024
+
+
+
+** Analysis setup **
+.tran 1s 10s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "4 bit binary adder2.net"
+.INC "4 bit binary adder2.als"
+
+
+.probe
+
+
+.END

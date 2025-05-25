@@ -1,0 +1,197 @@
+
+**** 04/29/24 01:59:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\3bit ripple counter.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Feb 19 10:33:47 2024
+
+
+
+** Analysis setup **
+.tran 0.5ms 16ms
+.OPTIONS DIGINITSTATE=0
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "3bit ripple counter.net"
+
+**** INCLUDING "3bit ripple counter.net" ****
+* Schematics Netlist *
+
+
+
+U_INPUT         STIM(1,1) $G_DPWR $G_DGND $N_0001 IO_STM IO_LEVEL=0 
++ 0 0
++ +.5mS 1
++REPEAT FOREVER
++ +.5mS 0
++  +.5mS 1
++ ENDREPEAT
+X_U4A         $N_0002 $N_0003 $N_0004 $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U3A         $N_0001 $D_HI $D_HI $N_0004 $N_0004 $N_0007 $N_0008 $G_DPWR
++  $G_DGND 7476 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2B         $N_0001 $D_HI $D_HI $N_0002 $N_0002 $N_0003 $N_0009 $G_DPWR
++  $G_DGND 7476 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1A         $N_0001 $D_HI $D_HI $D_HI $D_HI $N_0002 $N_0012 $G_DPWR $G_DGND
++  7476 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+
+**** RESUMING "3bit ripple counter.cir" ****
+.INC "3bit ripple counter.als"
+
+
+
+**** INCLUDING "3bit ripple counter.als" ****
+* Schematics Aliases *
+
+.ALIASES
+U_INPUT          INPUT(PWR=$G_DPWR GND=$G_DGND 1=$N_0001 )
+X_U4A           U4A(A=$N_0002 B=$N_0003 Y=$N_0004 PWR=$G_DPWR GND=$G_DGND )
+X_U3A           U3A(CLK=$N_0001 PREbar=$D_HI CLRbar=$D_HI J=$N_0004 K=$N_0004
++  Q=$N_0007 Qbar=$N_0008 PWR=$G_DPWR GND=$G_DGND )
+X_U2B           U2B(CLK=$N_0001 PREbar=$D_HI CLRbar=$D_HI J=$N_0002 K=$N_0002
++  Q=$N_0003 Qbar=$N_0009 PWR=$G_DPWR GND=$G_DGND )
+X_U1A           U1A(CLK=$N_0001 PREbar=$D_HI CLRbar=$D_HI J=$D_HI K=$D_HI
++  Q=$N_0002 Qbar=$N_0012 PWR=$G_DPWR GND=$G_DGND )
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+.ENDALIASES
+
+
+**** RESUMING "3bit ripple counter.cir" ****
+.probe
+
+
+.END
+
+**** 04/29/24 01:59:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\3bit ripple counter.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_08            D0_GATE         
+      TPLHMN    7.000000E-09    0            
+      TPLHTY   17.500000E-09    0            
+      TPLHMX   27.000000E-09    0            
+      TPHLMN    4.800000E-09    0            
+      TPHLTY   12.000000E-09    0            
+      TPHLMX   19.000000E-09    0            
+
+
+**** 04/29/24 01:59:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\3bit ripple counter.sch
+
+
+ ****     Digital Edge Triggered FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_76_0          D_76_1          
+  TPCLKQLHMN    0               6.400000E-09 
+  TPCLKQLHTY    0              16.000000E-09 
+  TPCLKQLHMX    0              25.000000E-09 
+  TPCLKQHLMN    0              10.000000E-09 
+  TPCLKQHLTY    0              25.000000E-09 
+  TPCLKQHLMX    0              40.000000E-09 
+   TPPCQLHMN    0               6.400000E-09 
+   TPPCQLHTY    0              16.000000E-09 
+   TPPCQLHMX    0              25.000000E-09 
+   TPPCQHLMN    0              10.000000E-09 
+   TPPCQHLTY    0              25.000000E-09 
+   TPPCQHLMX    0              40.000000E-09 
+    TWCLKLMN    0               0            
+    TWCLKLTY    0               0            
+    TWCLKLMX    0               0            
+    TWCLKHMN    0               0            
+    TWCLKHTY    0               0            
+    TWCLKHMX    0               0            
+     TWPCLMN    0               0            
+     TWPCLTY    0               0            
+     TWPCLMX    0               0            
+   TSUDCLKMN    0               0            
+   TSUDCLKTY    0               0            
+   TSUDCLKMX    0               0            
+ TSUPCCLKHMN    0               0            
+ TSUPCCLKHTY    0               0            
+ TSUPCCLKHMX    0               0            
+    THDCLKMN    0               0            
+    THDCLKTY    0               0            
+    THDCLKMX    0               0            
+  TSUCECLKMN    0               0            
+  TSUCECLKTY    0               0            
+  TSUCECLKMX    0               0            
+   THCECLKMN    0               0            
+   THCECLKTY    0               0            
+   THCECLKMX    0               0            
+
+
+**** 04/29/24 01:59:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\3bit ripple counter.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+WARNING -- No analog devices -- Small-Signal analysis ignored
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

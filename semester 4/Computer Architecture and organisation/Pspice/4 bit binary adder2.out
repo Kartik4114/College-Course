@@ -1,0 +1,207 @@
+
+**** 04/28/24 18:26:34 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4 bit binary adder2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 29 10:29:24 2024
+
+
+
+** Analysis setup **
+.tran 1s 10s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "4 bit binary adder2.net"
+
+**** INCLUDING "4 bit binary adder2.net" ****
+* Schematics Netlist *
+
+
+
+X_U3A         $N_0001 $N_0002 $N_0003 $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U4A         $N_0001 $N_0004 $N_0005 $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U5A         $N_0006 $N_0003 $N_0005 $N_0007 $G_DPWR $G_DGND 7427 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1         $D_LO $N_0011 $N_0010 $N_0009 $N_0008 $N_0015 $N_0014 $N_0013
++  $N_0012 $N_0006 $N_0017 $N_0004 $N_0002 $N_0001 $G_DPWR $G_DGND 7483A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U6A         $N_0007 $N_0018 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2         $D_LO $N_0017 $N_0004 $N_0002 $N_0001 $D_LO $N_0018 $N_0018 $D_LO
++  $N_0020 $N_0024 $N_0023 $N_0022 $N_0021 $G_DPWR $G_DGND 7483A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_A2         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0009 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_A3         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0010 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_A4         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0011 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_B1         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0012 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+U_B3         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0014 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+U_B4         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0015 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_B2         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0013 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 1  
+U_A1         STIM(1,1)
++ $G_DPWR $G_DGND
++ $N_0008 
++ IO_STM
++ IO_LEVEL=0
++  0s 0  
++ 1s 0  
+
+**** RESUMING "4 bit binary adder2.cir" ****
+.INC "4 bit binary adder2.als"
+
+
+
+**** INCLUDING "4 bit binary adder2.als" ****
+* Schematics Aliases *
+
+.ALIASES
+X_U3A           U3A(A=$N_0001 B=$N_0002 Y=$N_0003 PWR=$G_DPWR GND=$G_DGND )
+X_U4A           U4A(A=$N_0001 B=$N_0004 Y=$N_0005 PWR=$G_DPWR GND=$G_DGND )
+X_U5A           U5A(A=$N_0006 B=$N_0003 C=$N_0005 Y=$N_0007 PWR=$G_DPWR
++  GND=$G_DGND )
+X_U1            U1(C0=$D_LO A1=$N_0011 A2=$N_0010 A3=$N_0009 A4=$N_0008
++  B1=$N_0015 B2=$N_0014 B3=$N_0013 B4=$N_0012 C4=$N_0006 SUM1=$N_0017
++  SUM2=$N_0004 SUM3=$N_0002 SUM4=$N_0001 PWR=$G_DPWR GND=$G_DGND )
+X_U6A           U6A(A=$N_0007 Y=$N_0018 PWR=$G_DPWR GND=$G_DGND )
+X_U2            U2(C0=$D_LO A1=$N_0017 A2=$N_0004 A3=$N_0002 A4=$N_0001
++  B1=$D_LO B2=$N_0018 B3=$N_0018 B4=$D_LO C4=$N_0020 SUM1=$N_0024 SUM2=$N_0023
++  SUM3=$N_0022 SUM4=$N_0021 PWR=$G_DPWR GND=$G_DGND )
+U_A2            A2(PIN1=$N_0009 )
+U_A3            A3(PIN1=$N_0010 )
+U_A4            A4(PIN1=$N_0011 )
+U_B1            B1(PIN1=$N_0012 )
+U_B3            B3(PIN1=$N_0014 )
+U_B4            B4(PIN1=$N_0015 )
+U_B2            B2(PIN1=$N_0013 )
+U_A1            A1(PIN1=$N_0008 )
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+.ENDALIASES
+
+
+**** RESUMING "4 bit binary adder2.cir" ****
+.probe
+
+
+.END
+
+**** 04/28/24 18:26:34 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4 bit binary adder2.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_08            D_27            D0_GATE         D_04            
+      TPLHMN    7.000000E-09    4.000000E-09    0               4.800000E-09 
+      TPLHTY   17.500000E-09   10.000000E-09    0              12.000000E-09 
+      TPLHMX   27.000000E-09   15.000000E-09    0              22.000000E-09 
+      TPHLMN    4.800000E-09    2.800000E-09    0               3.200000E-09 
+      TPHLTY   12.000000E-09    7.000000E-09    0               8.000000E-09 
+      TPHLMX   19.000000E-09   11.000000E-09    0              15.000000E-09 
+
+
+**** 04/28/24 18:26:34 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4 bit binary adder2.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+WARNING -- No analog devices -- Small-Signal analysis ignored
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .05
+

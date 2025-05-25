@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "unordered_map": "cpp",
+        "queue": "cpp",
+        "stdio.h": "c",
+        "stdlib.h": "c"
+    }
+}

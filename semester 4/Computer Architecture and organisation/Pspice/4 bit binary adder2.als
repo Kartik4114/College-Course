@@ -1,0 +1,26 @@
+* Schematics Aliases *
+
+.ALIASES
+X_U3A           U3A(A=$N_0001 B=$N_0002 Y=$N_0003 PWR=$G_DPWR GND=$G_DGND )
+X_U4A           U4A(A=$N_0001 B=$N_0004 Y=$N_0005 PWR=$G_DPWR GND=$G_DGND )
+X_U5A           U5A(A=$N_0006 B=$N_0003 C=$N_0005 Y=$N_0007 PWR=$G_DPWR
++  GND=$G_DGND )
+X_U1            U1(C0=$D_LO A1=$N_0011 A2=$N_0010 A3=$N_0009 A4=$N_0008
++  B1=$N_0015 B2=$N_0014 B3=$N_0013 B4=$N_0012 C4=$N_0006 SUM1=$N_0017
++  SUM2=$N_0004 SUM3=$N_0002 SUM4=$N_0001 PWR=$G_DPWR GND=$G_DGND )
+X_U6A           U6A(A=$N_0007 Y=$N_0018 PWR=$G_DPWR GND=$G_DGND )
+X_U2            U2(C0=$D_LO A1=$N_0017 A2=$N_0004 A3=$N_0002 A4=$N_0001
++  B1=$D_LO B2=$N_0018 B3=$N_0018 B4=$D_LO C4=$N_0020 SUM1=$N_0024 SUM2=$N_0023
++  SUM3=$N_0022 SUM4=$N_0021 PWR=$G_DPWR GND=$G_DGND )
+U_A2            A2(PIN1=$N_0009 )
+U_A3            A3(PIN1=$N_0010 )
+U_A4            A4(PIN1=$N_0011 )
+U_B1            B1(PIN1=$N_0012 )
+U_B3            B3(PIN1=$N_0014 )
+U_B4            B4(PIN1=$N_0015 )
+U_B2            B2(PIN1=$N_0013 )
+U_A1            A1(PIN1=$N_0008 )
+_    _($G_DPWR=$G_DPWR)
+_    _($G_DGND=$G_DGND)
+.ENDALIASES
+

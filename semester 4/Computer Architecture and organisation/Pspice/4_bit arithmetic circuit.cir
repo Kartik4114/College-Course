@@ -1,0 +1,23 @@
+* C:\Users\HP\Desktop\college\semester4\Computer Architecture and organisation\Pspice\4_bit arithmetic circuit.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Feb 12 10:03:22 2024
+
+
+
+** Analysis setup **
+.tran 0s 8s 0 1s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "4_bit arithmetic circuit.net"
+.INC "4_bit arithmetic circuit.als"
+
+
+.probe
+
+
+.END
